@@ -11,15 +11,29 @@ import java.util.Comparator;
 public class TweetList {
     private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 
+    /**
+     * Instantiates a new Tweet list.
+     */
     public TweetList(){
 
     }
 
+    /**
+     * Get tweet tweet.
+     *
+     * @param index the index
+     * @return the tweet
+     */
     public Tweet getTweet(int index){
         return tweets.get(index);
     }
 
-    // http://stackoverflow.com/questions/5207029/how-to-sort-a-list-of-objects-by-their-date-java-collections-listobject
+    /**
+     * Gets tweets.
+     *
+     * @return the tweets
+     */
+// http://stackoverflow.com/questions/5207029/how-to-sort-a-list-of-objects-by-their-date-java-collections-listobject
     public ArrayList<Tweet> getTweets() {
         Collections.sort(tweets, new Comparator<Tweet>() {
             public int compare(Tweet t1, Tweet t2) {
@@ -29,9 +43,21 @@ public class TweetList {
         return tweets;
     }
 
+    /**
+     * Gets count.
+     *
+     * @return the count
+     */
     public int getCount() {
         return tweets.size();
     }
+
+    /**
+     * Has tweet boolean.
+     *
+     * @param tweet the tweet
+     * @return the boolean
+     */
     public boolean hasTweet(Tweet tweet){
         for (Tweet t : tweets) {
             if (t.equals(tweet)) {
@@ -41,6 +67,11 @@ public class TweetList {
         return tweets.contains(tweet);
     }
 
+    /**
+     * Add.
+     *
+     * @param tweet the tweet
+     */
     public void add(Tweet tweet) {
         if (tweets.contains(tweet)) {
             throw new IllegalArgumentException();
@@ -49,6 +80,11 @@ public class TweetList {
         }
     }
 
+    /**
+     * Delete.
+     *
+     * @param tweet the tweet
+     */
     public void delete(Tweet tweet) {
         tweets.remove(tweet);
     }

@@ -1,3 +1,9 @@
+/*
+Copyright (C) 2016 Team 20, CMPUT301, University of Alberta - All Rights Reserved.
+You may use, copy or distribute this code under terms and conditions of University of Alberta
+and Code of Student behavior
+Please contact michaellin@ualberta.ca for more details or questions.
+ */
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -23,8 +29,29 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * This class is the main view class in LonelyTwitter class.
+ * It deals with user inputs, saves/loads them
+ * <p> you can access this file from android device monitor</p>
+ * <pre> pre-formatted text</pre>
+ * <code>
+ *     pseudo-code that is used in this class
+ *     step1 <br>
+ *     step2 <br>
+ * </code>
+ * @author Ali
+ * @since xx
+ * @see whatever
+ */
 public class LonelyTwitterActivity extends Activity {
 
+	/**
+	 * THis is the name of the file that is saved in your virtual device
+	 * You can access it through Android Device monitor by selecting your app
+	 * then data -> data -> file.sav
+	 * @see NormalTweet
+	 * @author A
+	 */
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
@@ -64,6 +91,11 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
+	/**
+	 * This method loads the json file, generates the tweets from its contents
+	 * @throws RuntimeException
+	 * @exception FileNotFoundException
+	 */
 	private void loadFromFile() {
 		ArrayList<String> tweets = new ArrayList<String>();
 		try {
@@ -81,7 +113,12 @@ public class LonelyTwitterActivity extends Activity {
 			throw new RuntimeException();
 		}
 	}
-	
+
+	/**
+	 * This method save changes in json file
+	 * @throws RuntimeException
+	 * @exception FileNotFoundException
+	 */
 	private void saveInFile() {
 		try {
 
@@ -97,5 +134,14 @@ public class LonelyTwitterActivity extends Activity {
 			// TODO Auto-generated catch block
 			throw new RuntimeException();
 		}
+	}
+
+	/**
+	 * This method build a tweet string
+	 * @param xx1 blablabla
+	 * @param xx2 blablabla
+     */
+	protected void buildTweetString(String xx1, String xx2) {
+
 	}
 }
