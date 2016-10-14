@@ -54,6 +54,7 @@ public class LonelyTwitterActivity extends Activity {
 	 * @see NormalTweet
 	 * @author A
 	 */
+    public final static String EXTRA_MESSAGE = "ca.ualberta.cs.lonelytwitter.MESSAGE";
     private Activity activity = this;
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
@@ -98,6 +99,8 @@ public class LonelyTwitterActivity extends Activity {
         oldTweetsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(activity, EditTweetActivity.class);
+                String tweetText = tweetList.get(i).toString();
+                intent.putExtra(EXTRA_MESSAGE, tweetText);
                 startActivity(intent);
             }
         });
