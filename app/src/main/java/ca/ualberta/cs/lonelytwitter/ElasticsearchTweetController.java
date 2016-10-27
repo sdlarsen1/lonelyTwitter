@@ -62,7 +62,9 @@ public class ElasticsearchTweetController {
 
 			// Assumption: only search_parameters[0] is used.
 
-			Search search = new Search.Builder(search_parameters[0])
+			String search_string = "{\"from\": 0, \"size\": 10000}";
+
+			Search search = new Search.Builder(search_string)
 					.addIndex("testing")
 					.addType("tweet")
 					.build();
