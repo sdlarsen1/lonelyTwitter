@@ -16,11 +16,11 @@ public abstract class Tweet implements Tweetable {
         this.message = message;
         this.date = new Date();
     }
-
-    public Tweet(String message, Date date){
-        this.message = message;
-        this.date = date;
-    }
+// commented out, never used
+//    public Tweet(String message, Date date){
+//        this.message = message;
+//        this.date = date;
+//    }
 
     @Override
     public String toString(){
