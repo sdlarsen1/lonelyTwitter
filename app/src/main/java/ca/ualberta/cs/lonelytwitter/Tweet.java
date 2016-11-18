@@ -4,6 +4,8 @@ import java.util.Date;
 
 import io.searchbox.annotations.JestId;
 
+
+// removed unused function declarations
 public abstract class Tweet implements Tweetable {
     @JestId
     private String id; // new
@@ -36,9 +38,9 @@ public abstract class Tweet implements Tweetable {
         this.message = message;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
+//    public void setDate(Date date) {
+//        this.date = date;
+//    }
 
     public String getMessage() {
         return message;
@@ -48,9 +50,9 @@ public abstract class Tweet implements Tweetable {
         return date;
     }
 
-    public String getId() {  // new
-        return id;
-    }
+//    public String getId() {  // new
+//        return id;
+//    }
 
     public void setId(String id) {  // new
         this.id = id;

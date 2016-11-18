@@ -7,7 +7,6 @@ import com.searchly.jestdroid.DroidClientConfig;
 import com.searchly.jestdroid.JestClientFactory;
 import com.searchly.jestdroid.JestDroidClient;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +15,10 @@ import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 
-/**
- * Created by stephen on 16-10-20.
- */
+
+// removed default javadoc
+// removed unused import
+
 public class ElasticsearchTweetController {
 
 	private static JestDroidClient client;
